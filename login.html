@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('BG4.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container {
+            background-color: #f8f9fa; /* Light gray background */
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-left: 30%; 
+        }
+        .login-container h2 {
+            font-family: 'Cursive';
+            text-align: center;
+        }
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: none;
+        }
+        .btn-google {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .btn-google {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        
+        .btn-google img {
+            height: 20px;
+            margin-right: 10px;
+        }
+        @media (max-width: 992px) { /* Tablets and smaller */
+            .login-container {
+                margin-right: 5%;
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) { /* Tablets and smaller devices */
+            body {
+                justify-content: center; /* Center the form on smaller screens */
+            }
+
+            .login-container {
+                margin: 0 10%;
+                max-width: 100%;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 576px) { /* Mobile devices */
+            .login-container {
+                margin: 0 5%;
+                padding: 15px;
+            }
+
+            .login-container h2 {
+                font-size: 24px;
+            }
+
+            .btn-primary {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Hi welcome!</h2>
+        
+        <!-- Login Form -->
+        <form>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            <div class="text-center mt-2">
+                <a href="forgot-password.html" class="link-primary">Forgot Password?</a>
+            </div>
+            <div class="text-center mt-2">
+                Don't have an account? <a href="signup.html" class="link-primary">Sign Up</a>
+            </div>
+        </form>
+        
+        <!-- Social Login -->
+        <div class="text-center my-3">or</div>
+        
+        <div class="d-grid">
+            <button class="btn-google" onclick="window.location.href = 'https://google.com'; return false;">
+                <img src="g1.png" alt="Google"> Log in with Google
+            </button>
+           
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+</body>
+</html>
